@@ -1,5 +1,8 @@
 {
   "version": "1.0.0-*",
+  "buildOptions": {
+    "emitEntryPoint": true
+  },
   "description": "Owin.Swagger.Documentation",
   "authors": [ "sreejesh" ],
   "tags": [ "" ],
@@ -12,21 +15,12 @@
     "Swagger/lib/*.js",
     "Swagger/*.html",
     "Swagger/*.js"
-  ],
+  ], 
   "frameworks": {
     "net451": {
       "dependencies": {
         "Microsoft.Owin": "3.0.1",
         "Microsoft.Owin.StaticFiles": "3.0.1"
-      }
-    },
-    "dotnet5.4": {
-      "dependencies": {
-        "Microsoft.CSharp": "4.0.1-beta-23516",
-        "System.Collections": "4.0.11-beta-23516",
-        "System.Linq": "4.0.1-beta-23516",
-        "System.Runtime": "4.0.21-beta-23516",
-        "System.Threading": "4.0.11-beta-23516"
       }
     }
   },
