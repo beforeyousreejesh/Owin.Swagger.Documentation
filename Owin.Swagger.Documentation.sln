@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{145528FE-1777-4B1F-8A51-B168A4BF20F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D3E5A2F7-BBCF-45DF-B159-D095B77B4EA6}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Owin.Swagger.Documentation", "src\Owin.Swagger.Documentation\Owin.Swagger.Documentation.xproj", "{2C8C98F2-0E67-45C5-A916-4A1E567E9AFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C8C98F2-0E67-45C5-A916-4A1E567E9AFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C8C98F2-0E67-45C5-A916-4A1E567E9AFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C8C98F2-0E67-45C5-A916-4A1E567E9AFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C8C98F2-0E67-45C5-A916-4A1E567E9AFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2C8C98F2-0E67-45C5-A916-4A1E567E9AFD} = {145528FE-1777-4B1F-8A51-B168A4BF20F6}
+	EndGlobalSection
+EndGlobal
