@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Owin.Swagger.Documentation
 {
-    public class CustomMemoryStream : MemoryStream
+    internal class CustomMemoryStream : MemoryStream
     {
         protected override void Dispose(bool disposing)
         {
