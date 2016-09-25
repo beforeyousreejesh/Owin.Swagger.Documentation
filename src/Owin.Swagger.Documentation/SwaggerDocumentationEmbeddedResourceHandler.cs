@@ -61,7 +61,7 @@ namespace Owin.Swagger.Documentation
             }
             _baseNamespace = string.IsNullOrEmpty(baseNamespace) ? string.Empty : baseNamespace + ".";
             _assembly = assembly;
-            _lastModified = new FileInfo(assembly.Location).LastWriteTime;
+            _lastModified = DateTime.Now;
         }
 
         /// <summary>

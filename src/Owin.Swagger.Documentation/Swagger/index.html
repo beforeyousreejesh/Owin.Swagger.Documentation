@@ -46,8 +46,8 @@
             if (url && url.length > 1) {
                 url = decodeURIComponent(url[1]);
             } else {
-               // url = "http://petstore.swagger.io/v2/swagger.json";
-			  url=window.location.toString().replace(/\/*#?.*/, '/swagger.json');
+                //url = "http://petstore.swagger.io/v2/swagger.json";
+			  url=window.location.toString().replace(/\/*#?.*/, '/definition/swagger.json');
             }
 
             window.swaggerUi = new SwaggerUi({

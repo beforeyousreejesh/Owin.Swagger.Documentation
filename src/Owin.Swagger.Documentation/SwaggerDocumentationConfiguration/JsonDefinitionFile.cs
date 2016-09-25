@@ -34,7 +34,7 @@ namespace Owin.Swagger.Documentation
         public override string ToString()
         {
             using (StreamReader jsonReader = IsStream ?
-                new StreamReader(SwaggerDefinitionStream) :
+                new StreamReader(SwaggerDefinition) :
                 new StreamReader(new MemoryStream(SwaggerDefinitionBytes)))
             {
                 return jsonReader.ReadToEnd();

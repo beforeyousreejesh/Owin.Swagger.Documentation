@@ -35,10 +35,13 @@ namespace Owin.Swagger.Documentation
             SwaggerDefinitionType = swaggerDefinitionType;
             SwaggerDefinitionBytes = swaggerDefinition;
         }
-        
-        internal SwaggerDefinitionFile GetSwaggerDefiniton()
+
+        internal SwaggerDefinitionFile SwaggerDefiniton
         {
-            return SwaggerDefinitionFactory.CreateFromConfiguration(this);
-        }        
+            get
+            {
+                return SwaggerDefinitionFactory.CreateFromConfiguration(this);
+            }
+        }
     }
 }

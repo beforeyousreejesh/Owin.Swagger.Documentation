@@ -22,13 +22,17 @@ namespace Owin.Swagger.Documentation
 
         public async override Task Invoke(IOwinContext context)
         {
-            if (context.Request.Path.StartsWithSegments(new PathString("/swagger.json")))
+            if (context.Request.Path.StartsWithSegments(new PathString("/definition/swagger.json")))
             {
-                var jsonStream = await _swaggerDefinitionConfiguration.GetSwaggerDefiniton().GetJsonStreamAsync().ConfigureAwait(false); ;
+                var jsonStream = await _swaggerDefinitionConfiguration.
+                                            SwaggerDefiniton
+                                            .GetJsonStreamAsync()
+                                            .ConfigureAwait(false); ;
+
                 context.Response.ContentType = "application/json";
                 context.Response.StatusCode = 200;
-                context.Response.Body = jsonStream;
                 context.Response.ContentLength = jsonStream.Length;
+                await jsonStream.CopyToAsync(context.Response.Body).ConfigureAwait(false);
 
                 return;
             }

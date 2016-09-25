@@ -34,7 +34,7 @@ namespace Owin.Swagger.Documentation
                 object yamlObject = null;
 
                 using (StreamReader yamlReader = IsStream ?
-                    new StreamReader(SwaggerDefinitionStream)
+                    new StreamReader(SwaggerDefinition)
                     : new StreamReader(new MemoryStream(SwaggerDefinitionBytes)))
                 {
                     Deserializer yamlSerializer = new Deserializer();

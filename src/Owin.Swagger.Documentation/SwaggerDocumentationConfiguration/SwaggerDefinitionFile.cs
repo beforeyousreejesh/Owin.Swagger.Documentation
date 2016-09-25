@@ -14,6 +14,8 @@ namespace Owin.Swagger.Documentation
 
         protected internal bool IsStream = false;
 
+        private static Stream _swaggerStream;
+
         protected internal SwaggerDefinitionFile(Stream swaggerDefinitionStream)
         {
             if (swaggerDefinitionStream == null)
@@ -34,9 +36,30 @@ namespace Owin.Swagger.Documentation
             SwaggerDefinitionBytes = swaggerDefinitionBytes;
         }
 
-        internal async virtual Task<Stream> GetJsonStreamAsync()
+        protected internal Stream SwaggerDefinition
         {
-            return SwaggerDefinitionStream;
+            get
+            {
+                if (IsStream)
+                {
+                    if (_swaggerStream != null)
+                    {
+                        _swaggerStream.Position = 0;
+                        return _swaggerStream;
+                    }
+
+                    _swaggerStream = new CustomMemoryStream();
+                    SwaggerDefinitionStream.CopyTo(_swaggerStream);
+                    _swaggerStream.Position = 0;
+                    return _swaggerStream;
+                }
+
+                throw new NotSupportedException("Given input is not stream");
+            }
+        }
+        internal virtual Task<Stream> GetJsonStreamAsync()
+        {
+            return Task.FromResult(SwaggerDefinition);
         }
 
         public override string ToString()
