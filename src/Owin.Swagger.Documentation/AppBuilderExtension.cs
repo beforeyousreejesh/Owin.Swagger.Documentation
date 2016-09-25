@@ -9,6 +9,11 @@ namespace Owin.Swagger.Documentation
 {
     public static class AppBuilderExtension
     {
+        /// <summary>
+        /// Custom swagger documentation. 
+        /// </summary>
+        /// <param name="appBuilder"></param>
+        /// <param name="swaggerDefinitionConfiguration"></param>
         public static void UseSwaggerDocumentation(this IAppBuilder appBuilder, SwaggerDefinitionConfiguration swaggerDefinitionConfiguration)
         {
             appBuilder.Use<SwaggerDocumentionMiddleware>(swaggerDefinitionConfiguration);

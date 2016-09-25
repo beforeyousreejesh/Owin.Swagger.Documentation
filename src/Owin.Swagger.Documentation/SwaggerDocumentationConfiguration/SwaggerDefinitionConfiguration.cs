@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Owin.Swagger.Documentation
 {
+    /// <summary>
+    /// Configuration for documenation.
+    /// </summary>
     public class SwaggerDefinitionConfiguration
     {
         internal SwaggerDefinitionType SwaggerDefinitionType;
@@ -14,6 +17,11 @@ namespace Owin.Swagger.Documentation
 
         internal byte[] SwaggerDefinitionBytes;
 
+        /// <summary>
+        /// Configuration for documenation.
+        /// </summary>
+        /// <param name="swaggerDefinitionType">Type of definition</param>
+        /// <param name="swaggerDefinition"></param>
         public SwaggerDefinitionConfiguration(SwaggerDefinitionType swaggerDefinitionType, Stream swaggerDefinition)
         {
             if (swaggerDefinition == null)
@@ -25,6 +33,11 @@ namespace Owin.Swagger.Documentation
             SwaggerDefinitionStream = swaggerDefinition;
         }
 
+        /// <summary>
+        /// Configuration for documenation.
+        /// </summary>
+        /// <param name="swaggerDefinitionType">Type of definition</param>
+        /// <param name="swaggerDefinition"></param>
         public SwaggerDefinitionConfiguration(SwaggerDefinitionType swaggerDefinitionType, byte[] swaggerDefinition)
         {
             if (swaggerDefinition == null)

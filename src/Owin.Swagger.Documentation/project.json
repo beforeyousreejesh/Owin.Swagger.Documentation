@@ -3,7 +3,7 @@
   "buildOptions": {
     "emitEntryPoint": true
   },
-  "description": "Owin.Swagger.Documentation",
+  "description": "Owin swagger documentation",
   "authors": [ "sreejesh" ],
   "tags": [ "" ],
   "projectUrl": "",
